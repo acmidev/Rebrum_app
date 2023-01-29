@@ -1,0 +1,35 @@
+form {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 15px;
+}
+
+#newBudgetForm div  {
+    display: flex;
+   
+    
+}
+#newBudgetForm  label {
+    flex-grow: 1;
+    font-size:18px;
+
+    
+ 
+}
+#newBudgetForm div input {
+   
+    margin-left: 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 7.5px;
+    border: 1px solid gray;
+  
+}
+
+#newBudgetForm div input:focus {
+    outline: 2px solid rgb(40, 71, 209);
+    border: none;
+}

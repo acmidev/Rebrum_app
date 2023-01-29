@@ -1,15 +1,29 @@
 
 import './budget.css'
+import { useEffect } from 'react'
+    
 
 
 function Budget(props) {
+    var lastBudget = JSON.parse(localStorage.getItem('budget'))
+    console.log(lastBudget)
+    const budgetName =lastBudget[0].name
+    const budgetDate =lastBudget[1].date
+    const budgetCost =lastBudget[2].cost
+    const budgetInsurance =lastBudget[3].insurance
+    const budgetMaintenance =lastBudget[4].maintenance
+        
+          
+        
+    console.log(lastBudget[0].name)
+    
     return (
         <div className="budget">
-            <p className="cardTitle">{props.name}</p>
-            <p>Cost: <span>12000€</span></p>
-            <p>Date: <span>11/02/2024</span></p>
-            <p>Insurance: <span>100€ <span> per Month</span></span></p>
-            <p>Maintenance: <span>600  <span>per Year</span></span></p>
+            <p className="cardTitle">Presupuesto {budgetName}</p>
+            <p>Cost: <span>{budgetCost}</span></p>
+            <p>Date: <span>{budgetDate}</span></p>
+            <p>Insurance: <span>{budgetInsurance}€ <span> per Month</span></span></p>
+            <p>Maintenance: <span>{budgetMaintenance} € <span>per Year</span></span></p>
 
         </div>
     )
