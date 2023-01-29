@@ -1,0 +1,114 @@
+
+
+.createbudgetContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 0 15% 0 15%;
+    justify-content: space-around;
+    gap: 20px;
+}
+.createBudgets {
+    position: relative;
+    padding:15px;
+}
+.createBudgets h3 {
+    position: absolute;
+    top: 0;
+}
+
+.defaultBudget{
+    background-color: #E6E6E6;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 15px;
+    padding: 10px;
+    min-width: 150px;
+    height:150px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    transition: all 0.25s ease;
+    flex-grow: 1;
+    
+}
+.defaultBudget:hover {
+    transform: scale(1.1);
+    transform: translateY( -5px);
+}
+
+.createNewBudget {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    justify-content:center;
+    align-items: center;
+    background-color: #E6E6E6 ;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 15px;
+    min-width: 150px;
+    height:150px;
+    width: 150px;
+    text-align: center;
+    flex-grow: 1;
+    
+}
+.createNewBudget svg {
+    font-size: 50px;
+    color: rgb(81, 86, 97);
+    transition: all 0.25s ease;
+}
+
+.createNewBudget:hover svg {
+    font-size: 70px;
+
+    
+}
+
+form {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 15px;
+}
+
+#newBudgetForm div  {
+    display: flex;
+   
+    
+}
+#newBudgetForm  label {
+    flex-grow: 1;
+    font-size:18px;
+
+    
+ 
+}
+#newBudgetForm div input {
+   
+    margin-left: 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 7.5px;
+    border: 1px solid gray;
+  
+}
+
+#newBudgetForm div input:focus {
+    outline: 2px solid rgb(40, 71, 209);
+    border: none;
+}
+
+hr {
+    left: -5px;
+    position: absolute;
+    border: none;
+    border-left:    1px solid rgb(230, 230, 230);
+    height:         100%;
+    width:          1px; 
+}
