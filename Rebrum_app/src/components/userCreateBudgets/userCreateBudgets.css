@@ -11,6 +11,7 @@
 .createBudgets {
     position: relative;
     padding:15px;
+    transition: all 1s ease;
 }
 .createBudgets h3 {
     position: absolute;

@@ -1,13 +1,29 @@
 
-import { FiPlus, FiTrash } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
 import './userCreateBudgets.css'
 import React, { useState, useEffect } from 'react'
-import AdminTools from "../userTools/UserTools";
+import UserTools from '../userTools/UserTools'
 import FormBudget from '../formBudget/FormBudget'
+import { animated, useTransition  } from "@react-spring/web";
 
-
+//Para las animaciones con react spring, lo mejor es buscar la documentación porque es un poco lio por ahora.
 function UserCreateBudgets (props) {
+   
+    console.log(props.userToolsOpen)
     const [openForm, setOpenForm] = useState(false)
+
+    const transition = useTransition(props.userToolsOpen, {
+        from: {y: -100, opacity: 0},
+        enter: {y: 0, opacity: 1},
+        leave: {y: -100, opacity: 0},
+       
+
+    })
+    
+   
+    
+    console.log(transition)
+
     
     
     const handleForm = () => {
@@ -20,8 +36,8 @@ function UserCreateBudgets (props) {
     
     return (
         <div className="createBudgetContainer">
-        {props.userToolsOpen === true &&
-        <AdminTools />}
+        {transition((style, item ) => item ?
+        <animated.div style={style} ><UserTools/></animated.div> : '')}
         <div className="createBudgets">
             <hr ></hr>
             <h3>Create Budgets</h3>

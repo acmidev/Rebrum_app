@@ -1,7 +1,7 @@
 import './userTools.css'
 
 
-function AdminTools (){
+function UserTools (){
 
     return(
         <div className="userTools">
@@ -18,4 +18,4 @@ function AdminTools (){
 
 }
 
-export default AdminTools
+export default UserTools

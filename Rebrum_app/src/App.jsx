@@ -7,7 +7,7 @@ import './App.css'
 function App() {
 
   
-    const [userToolsOpen,setUserToolsOpen] = useState(true)
+    const [userToolsOpen,setUserToolsOpen] = useState(false)
    
     
   
