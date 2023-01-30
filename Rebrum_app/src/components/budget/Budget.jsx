@@ -6,7 +6,6 @@ import { useEffect } from 'react'
 
 function Budget(props) {
     var lastBudget = JSON.parse(localStorage.getItem('budget'))
-    console.log(lastBudget)
     const budgetName =lastBudget[0].name
     const budgetDate =lastBudget[1].date
     const budgetCost =lastBudget[2].cost
@@ -14,8 +13,7 @@ function Budget(props) {
     const budgetMaintenance =lastBudget[4].maintenance
         
           
-        
-    console.log(lastBudget[0].name)
+
     
     return (
         <div className="budget">

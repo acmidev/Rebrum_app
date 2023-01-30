@@ -68,7 +68,9 @@
     
 }
 
-
+.createBudgetContainer{
+    position: relative;
+}
 
 hr {
     left: -5px;

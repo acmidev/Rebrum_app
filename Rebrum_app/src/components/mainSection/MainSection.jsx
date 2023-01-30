@@ -4,11 +4,12 @@ import UserCreateBudgets from '../userCreateBudgets/UserCreateBudgets'
 import './mainSection.css'
 
 
-function MainSection () {
+function MainSection (props) {
+    
     return (
         <section className="mainSection" >
-            <UserBudgets />
-            <UserCreateBudgets />            
+            <UserBudgets  />
+            <UserCreateBudgets userToolsOpen={props.userToolsOpen} />            
         </section>
     )
 }

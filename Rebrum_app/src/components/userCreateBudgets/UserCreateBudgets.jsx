@@ -1,12 +1,13 @@
 
 import { FiPlus, FiTrash } from "react-icons/fi";
 import './userCreateBudgets.css'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import AdminTools from "../userTools/UserTools";
 import FormBudget from '../formBudget/FormBudget'
 
 
 function UserCreateBudgets (props) {
-    const [openForm, setOpenForm] = useState(true)
+    const [openForm, setOpenForm] = useState(false)
     
     
     const handleForm = () => {
@@ -18,7 +19,9 @@ function UserCreateBudgets (props) {
 
     
     return (
-        
+        <div className="createBudgetContainer">
+        {props.userToolsOpen === true &&
+        <AdminTools />}
         <div className="createBudgets">
             <hr ></hr>
             <h3>Create Budgets</h3>
@@ -28,16 +31,17 @@ function UserCreateBudgets (props) {
                     <p>Cancel</p> : 
                     <p>Create new Default Budget</p>
                     
-                     }
+                }
                 </div>
                 <div className="createNewBudget"><p>Create Personalized Budget</p> <FiPlus /></div>
                 
                 {openForm === true &&
                 <FormBudget   />
-                }
+            }
             </div>
 
         </div>
+            </div>
     ) 
 }
 
