@@ -19,4 +19,10 @@
     list-style: none;
     border-bottom: 1px solid rgb(184, 213, 238);
     margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.1s ease
+}
+
+.userTools li:hover {
+    text-shadow:#3e8dd7 1px 0 10px; ;
 }

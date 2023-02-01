@@ -1,6 +1,7 @@
 
 import UserBudgets from '../userBudgets/UserBudgets'
 import UserCreateBudgets from '../userCreateBudgets/UserCreateBudgets'
+import Modal from '../modal/Modal'
 import './mainSection.css'
 
 
@@ -8,6 +9,7 @@ function MainSection (props) {
     
     return (
         <section className="mainSection" >
+            <Modal />
             <UserBudgets  />
             <UserCreateBudgets userToolsOpen={props.userToolsOpen} />            
         </section>

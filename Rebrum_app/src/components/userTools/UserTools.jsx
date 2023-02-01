@@ -8,7 +8,7 @@ function UserTools (){
             <p className="userToolsTitle">User Options</p>
             <ul>
                 <li>My Profile</li>
-                <li>My Salary</li>
+                <li>My Income</li>
                 <li>My Budgets</li>
                 <li>Reports</li>
             </ul>
