@@ -9,7 +9,7 @@ import { animated, useTransition  } from "@react-spring/web";
 //Para las animaciones con react spring, lo mejor es buscar la documentación porque es un poco lio por ahora.
 function UserCreateBudgets (props) {
    
-    console.log(props.userToolsOpen)
+   
     const [openForm, setOpenForm] = useState(false)
 
     const transition = useTransition(props.userToolsOpen, {
@@ -22,7 +22,7 @@ function UserCreateBudgets (props) {
     
    
     
-    console.log(transition)
+   
 
     
     
@@ -37,7 +37,7 @@ function UserCreateBudgets (props) {
     return (
         <div className="createBudgetContainer">
         {transition((style, item ) => item ?
-        <animated.div style={style} ><UserTools/></animated.div> : '')}
+        <animated.div style={style} ><UserTools setModalOpen={props.setModalOpen}/></animated.div> : '')}
         <div className="createBudgets">
             <hr ></hr>
             <h3>Create Budgets</h3>
