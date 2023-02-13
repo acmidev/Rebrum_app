@@ -1,8 +1,11 @@
 import { FiPlus, FiTrash } from "react-icons/fi";
 import './formBudget.css'
+import axios from "axios"
 
 
-function formHandler(e) {
+
+
+ async function formHandler(e) {
     e.preventDefault();
     const budgetName = e.currentTarget.elements.budgetName.value 
     const budgetDate = e.currentTarget.elements.budgetDate.value 
@@ -17,7 +20,10 @@ function formHandler(e) {
         {maintenance: budgetMaintenance}
     ]
     localStorage.setItem("budget", JSON.stringify(budget))
-   
+    
+
+    await axios.post("http://localhost:5000/budgets", budget)
+    .then(response => console.log(response))
 
 }
 
